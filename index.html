@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนวณพลังงาน (e = mc^2)</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/stickers/100/e-key.png" type="image/x-icon">
+    <script src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        #loading {
+            display: none;
+        }
+
+        #show-result {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="m-32 flex justify-center">
+        <div class="mockup-browser border bg-base-300 w-[45rem]">
+            <div class="mockup-browser-toolbar">
+                <div class="input">https://watchakorn</div>
+            </div>
+
+            <div class="px-4 py-16 bg-base-200">
+                <div class="flex flex-col items-center">
+                    <span class="px-4 py-4 text-2xl">คำนวณพลังงาน (e = mc^2)</span>
+                    <div class="flex p-2">
+                        <label class="input-group input-group-md">
+                            <span>M = มวล (kg)</span>
+                            <input type="number" value="0.1" id="mass" step="0.1"
+                                class="input input-bordered input-md" />
+                        </label>
+                    </div>
+
+                    <div class="flex p-2">
+
+                        <label class="input-group input-group-md">
+                            <span>C = ความเร็วแสง (m/s)</span>
+                            <input type="number" value="299792458" id="speed-light"
+                                class="input input-bordered input-md" />
+                        </label>
+                    </div>
+                    <button onclick="calculateEnergy()" class="btn btn-primary px-16 m-4">คำนวณ</button>
+                    <span class="loading loading-spinner text-primary m-4" id="loading"></span>
+                    <div id="show-result">
+
+                        <div class="flex flex-col items-center">
+                            <span class="mt-4">
+                                พลังงานที่คำนวณได้
+                            </span>
+                            <span class="text-3xl p-2 text-info" style="font-family: Consolas;" id="result"></span>
+                            <div class="tooltip tooltip-top tooltip-primary" style="cursor: pointer;"
+                                data-tip="แรงจูล (Joule) เป็นหน่วยที่ใช้ในการวัดและแสดงค่าของพลังงาน แรงจูลเป็นหน่วยของพลังงานที่ถูกสร้างขึ้นหรือถูกโอนย้ายไปยังวัตถุหรือระบบใดๆ ในกระบวนการทำงานหรือการเคลื่อนที่">
+                                <span>
+                                    จูล
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
