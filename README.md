@@ -1,4 +1,4 @@
-<center>
+<div align="center">
 
 # เว็บแอปคำนวณพลังงาน ( e = mc<sup>2</sup> )
 
@@ -7,4 +7,4 @@
 
 
 
-</center>
+</div>
