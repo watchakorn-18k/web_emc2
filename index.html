@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="bg-gradient-to-l from-base-300 to-base-100">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,10 @@
     <style>
         * {
             font-family: 'Kanit', sans-serif;
+
         }
+
+
 
         #loading {
             display: none;
@@ -27,14 +30,14 @@
 
 <body>
     <div class="m-32 flex justify-center">
-        <div class="mockup-browser border bg-base-300 w-[45rem]">
-            <div class="mockup-browser-toolbar">
-                <div class="input">https://watchakorn</div>
+        <div class="mockup-browser border border-primary border-4 bg-base-300 w-[45rem] drop-shadow-2xl bg-primary">
+            <div class="mockup-browser-toolbar bg-primary">
+                <div class="input">github.com/watchakorn-18k/web_emc2</div>
             </div>
 
             <div class="px-4 py-16 bg-base-200">
                 <div class="flex flex-col items-center">
-                    <span class="px-4 py-4 text-2xl">คำนวณพลังงาน (e = mc^2)</span>
+                    <span class="px-4 py-4 text-2xl ">คำนวณพลังงาน (e = mc<sup>2</sup>)</span>
                     <div class="flex p-2">
                         <label class="input-group input-group-md">
                             <span>M = มวล (kg)</span>
@@ -42,7 +45,6 @@
                                 class="input input-bordered input-md" />
                         </label>
                     </div>
-
                     <div class="flex p-2">
 
                         <label class="input-group input-group-md">
@@ -51,7 +53,7 @@
                                 class="input input-bordered input-md" />
                         </label>
                     </div>
-                    <button onclick="calculateEnergy()" class="btn btn-primary px-16 m-4">คำนวณ</button>
+                    <button id=calculate class="btn btn-primary px-16 m-4">คำนวณ</button>
                     <span class="loading loading-spinner text-primary m-4" id="loading"></span>
                     <div id="show-result">
 
@@ -66,11 +68,8 @@
                                     จูล
                                 </span>
                             </div>
-
                         </div>
                     </div>
-
-
                 </div>
             </div>
 
