@@ -3,7 +3,7 @@ const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
-const calculate_process = () => {
+const calculateProcess = () => {
 
     let mass = parseFloat(document.getElementById("mass").value);
     if (isNaN(mass)) {
@@ -20,17 +20,22 @@ const calculate_process = () => {
     document.getElementById("result").textContent = e.toPrecision(14);
 }
 
-const calculateEnergy = () => {
+const calCulateEnergy = () => {
     document.querySelector("#show-result").style.display = "none";
     document.querySelector("#loading").style.display = "block";
 
     sleep(1000).then(() => {
         document.querySelector("#show-result").style.display = "block";
-        calculate_process();
+        calculateProcess();
         document.querySelector("#loading").style.display = "none";
     })
 
 
-
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    BtnCalculate = document.querySelector("#calculate");
+    BtnCalculate.addEventListener("click", calCulateEnergy);
+})
+
 
